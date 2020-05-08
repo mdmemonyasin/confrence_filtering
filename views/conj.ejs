@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Confrence-Details</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css"
+    />
+  </head>
+  <body>
+    <div>
+      <h1 style="text-align: center; background-color: black; color: white;">Confrence Details</h1>
+    </div>
+    <main>
+      <% if(data.length>0) { %>
+      <table class="table" border="1" style="background-color: black; color: white; justify-self: start;">
+        <thead>
+          <tr>
+            <th scope="col" style="font-size: 20px; color: tomato;">Name of the Conference</th>
+            <th scope="col" style="font-size: 20px; color: tomato;">City</th>
+            <th scope="col" style="font-size: 20px; color: tomato;">Conference website</th>
+            <th scope="col" style="font-size: 20px; color: tomato;">Venue</th>
+            <th scope="col" style="font-size: 20px; color: tomato;">Date</th>
+            <th scope="col" style="font-size: 20px; color: tomato;">Entry Type</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for(let i of data) { %>
+          <tr scope="row">
+            <td><%= i.confName %></td>
+            <td><%= i.city %></td>
+            <td><%= i.confUrl %></td>
+            <td><%= i.venue %></td>
+            <td><%= i.confStartDate %></td>
+            <td><%= i.entryType %></td>
+          </tr>
+          <% } %>
+        </tbody>
+      </table>
+      <% } else { %>
+      <h1>No Confrence Found!</h1>
+      <% } %>
+    </main>
+  </body>
+</html>
