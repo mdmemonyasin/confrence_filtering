@@ -3,6 +3,6 @@ const confController = require('../controllers/conf');
 
 const router = express.Router();
 
-router.get('/',confController.getConf);
+router.get('/getConf',confController.getConf);
 
 module.exports = router;

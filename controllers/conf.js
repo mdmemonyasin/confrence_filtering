@@ -21,9 +21,9 @@ exports.getConf = (req, res, next) => {
         newArray.push(uniqueObject[i]);
       }
 
-      // res.status(200).json(newArray);
-      res.render('conj',{
-        data: newArray
-      });
+      res.status(200).json(newArray);
+      // res.render('conj',{
+      //   data: newArray
+      // });
     });
 };
